@@ -11,7 +11,7 @@ public static class ModelShared
     public static async Task SendConfirmEmail(IEmailSender sender, string address, string confirmLink)
     {
         await sender.SendEmailAsync(address, "Confirm your Space Station 14 account",
-            $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(confirmLink)}'>clicking here</a>.");
+            $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(confirmLink)}'>clicking here</a>.\n\nOr use this link: {HtmlEncoder.Default.Encode(confirmLink)}");
     }
 
     public static async Task SendResetEmail(IEmailSender emailSender, string email, string callbackUrl)
