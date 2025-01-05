@@ -78,7 +78,7 @@ public class RegisterModel : PageModel
 
         [Required]
         [Display(Name = "I am 13 years of age or older")]
-        [MustBeTrue(ErrorMessage = "You must be 13 or older to sign up for Space Station 14.")]
+        [MustBeTrue(ErrorMessage = "You must be 13 or older to sign up for SimpleStation.")]
         public bool AgeCheck { get; set; }
     }
 

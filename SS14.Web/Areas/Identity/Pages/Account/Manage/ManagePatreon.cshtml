@@ -13,7 +13,7 @@
         @if (Model.PatreonLinked)
         {
             <p>
-                Your Patreon account is linked to your Space Station 14 account.<br/>
+                Your Patreon account is linked to your SimpleStation account.<br/>
                 @if (Model.PatreonTier == null)
                 {
                     <span>However, you currently have <strong>no active membership tier.</strong></span>
@@ -33,7 +33,7 @@
         {
             <p>
                 If you are one of our <a href="https://patreon.com/spacestation14">patrons</a>,
-                you can link your Patreon account with your Space Station 14 account here to receive recognition on servers.
+                you can link your Patreon account with your SimpleStation account here to receive recognition on servers.
             </p>
             <form id="link-form" method="post">
                 <button id="link-patreon" type="submit" asp-page-handler="LinkPatreon" class="btn btn-primary">Link Patreon account</button>
