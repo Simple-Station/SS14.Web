@@ -37,6 +37,6 @@ public class HomeController : Controller
 
     public IActionResult MainWebsite()
     {
-        return Redirect("https://spacestation14.com/");
+        return Redirect("https://simplestation.org/");
     }
 }
