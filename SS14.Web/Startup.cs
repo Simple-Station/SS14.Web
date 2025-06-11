@@ -227,6 +227,7 @@ public class Startup
         app.UseCookiePolicy(new CookiePolicyOptions()
         {
             Secure = CookieSecurePolicy.Always,
+            MinimumSameSitePolicy = SameSiteMode.Lax,
         });
 
         app.UseAuthentication();
