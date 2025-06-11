@@ -88,7 +88,6 @@ public class Startup
             options.LoginPath = $"/Identity/Account/Login";
             options.LogoutPath = $"/Identity/Account/Logout";
             options.AccessDeniedPath = $"/Identity/Account/AccessDenied";
-            // options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
         });
 
         services.AddControllersWithViews();
