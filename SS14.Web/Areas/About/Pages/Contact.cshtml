@@ -1,0 +1,24 @@
+﻿@page
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using SS14.Auth.Shared
+@model SS14.Web.Areas.Admin.Pages.Index
+@inject IAuthorizationService AuthorizationService
+
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+  </ol>
+</nav>
+
+<p>
+    If you want to contact us, you can do so via any of these methods, in order of fastest to slowest response:
+    <a href="https://discord.gg/49KeKwXc8g">Discord</a> (You can DM either deathb4defeat (DEATHB4DEFEAT#4404) or pspritechologist (🦆Pspritechologist🦆#9442) if you want to talk directly),
+    <a href="https://matrix.to/#/#simplestation:matrix.org">Matrix</a>,
+    <a href="https://github.com/Simple-Station">GitHub</a>,
+    or <a href="mailto:ss14parkstation@gmail.com">Email</a>
+</p>
