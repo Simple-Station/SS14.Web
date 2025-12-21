@@ -1,0 +1,71 @@
+﻿@page
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using SS14.Auth.Shared
+@model SS14.Web.Areas.About.Pages.Privacy
+@inject IAuthorizationService AuthorizationService
+
+@{
+ViewData["Title"] = "Privacy";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+    </ol>
+</nav>
+
+<div>
+    <h1 id="privacy-policy">Privacy Policy</h1>
+    <p>This document will outline how we, SimpleStation, collect and handle your data. Here are the
+        first-party services we manage for Space Station: Beyond (SS:B), covered by this privacy policy:</p>
+    <dl>
+        <dt>SimpleStation Authentication Hub</dt>
+        <dd>Manages your SimpleStation account and is used by the official launcher whenever you play on servers.</dd>
+        <dt>Official SimpleStation servers</dt>
+        <dd>Our official game servers ("Parkstation", "Einstein Engines") ran by us. Only relevant if you connect to these servers.</dd>
+    </dl>
+    <h2 id="authentication-hub-privacy-policy">Authentication Hub Privacy Policy</h2>
+    <p>This section of the privacy policy applies if you use our official SimpleStation authentication server and/or SS:B launcher.
+    </p>
+    <p>We collect only data you enter into the website or launcher to register your account and/or change your account preferences:</p>
+    <ul>
+        <li>Email address</li>
+        <li>Password (stored hashed+salted)</li>
+        <li>Username</li>
+        <li>Time of registration</li>
+        <li>Randomly generated UUID to identify your account across SS14</li>
+        <li>Patreon user ID and membership tier (if you choose to <a asp-page="/Identity/Account/Manage/ManagePatreon">link your Patreon account</a>)</li>
+    </ul>
+    <p>We use your email address to confirm validity of your account and may send you necessary emails for
+        administration of the authentication server. <strong>We will not send you any form of marketing or promotional emails.</strong></p>
+    <p>Your email address and/or username can be used to log you in into our services, combined with your password.</p>
+    <p>The following data is considered public information that may be queried for or shared to game servers you play on:</p>
+    <ul>
+        <li>Username</li>
+        <li>Account UUID</li>
+        <li>Account creation time</li>
+        <li>Patreon membership tier (if you choose to <a asp-page="/Identity/Account/Manage/ManagePatreon">link your Patreon account</a>)</li>
+    </ul>
+    <p>We do not share any other data such as your email address without your explicit consent.</p>
+    <h2 id="game-server-privacy-policy">Game Server Privacy Policy</h2>
+    <!-- <blockquote class="notice">
+        <p><strong>Updated January 19th, 2025:</strong> Our game servers now check IP addresses with IPIntel to detect VPNs. Also specified usage of Discord.</p>
+    </blockquote> -->
+    <p>This section of the privacy policy applies only if you play on our first-party SimpleStation servers.</p>
+    <p>Some terminology used in this section:</p>
+    <ul>
+        <li>
+            Hardware ID (HWID)
+            <br />
+            A hashed identifier generated from your computer's hardware or OS installation.
+        </li>
+    </ul>
+    <p>We log all connections you make to our game servers, storing IP address, HWID, account UUID and name, and which authentication server you connected with. All in-game actions you take may also be logged, only directly associated with your account UUID/name. We also store all data you explicitly enter such as your character preferences in-game.</p>
+    <p>Connection logs (including IP/HWID) are shared with trusted server administrators for enforcement of server rules. Connection logs are not shared publically.</p>
+    <p>Logs of in-game actions may be made public for anybody to view for the purposes of rule enforcement. This includes private conversations had with server administrators in-game.</p>
+    <!-- <p>New players may have their IP address sent to the third-party <a href="https://getipintel.net/">IPIntel</a> service to detect and deny VPN connections. We deny VPN-based connections by default as they are commonly used for purposes such as ban evasion. You may request an exemption for using VPNs on our forum, which will also stop your IP being sent to IPIntel.</p> -->
+    <p>Some interactions (talking in OOC chat, conversations with server staff via AHelp) may be sent to our Discord community and will therefore be logged there.</p>
+    <h2 id="contact">Contact</h2>
+    <p>See our <a asp-page="Contact">contact</a> page for any questions you may have.</p>
+</div>

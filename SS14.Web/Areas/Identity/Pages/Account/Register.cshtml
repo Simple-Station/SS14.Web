@@ -21,7 +21,8 @@
             <div class="form-group">
                 <label asp-for="Input.Email"></label>
                 <input asp-for="Input.Email" class="form-control" />
-                <small id="emailHelp" class="form-text text-muted">Do not sign up with "temporary" or "burner" email addresses. Your account may be banned if you do.</small>
+                <small class="form-text text-muted">Do not sign up with "temporary" or "burner" email addresses. Your account may be banned if you do.</small>
+                <small class="form-text text-muted">If you do not want to use an email (set it to something random) or don't ever receive the verification email, we are able to manually approve your account if you <a asp-area="" asp-controller="Home" asp-action="Contact">contact us</a> with your chosen username within 24 hours of account creation.</small>
                 <span asp-validation-for="Input.Email" class="text-danger"></span>
             </div>
             <div class="form-group">

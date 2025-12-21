@@ -1,0 +1,19 @@
+﻿@page
+@using Microsoft.AspNetCore.Authorization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@using SS14.Auth.Shared
+@model SS14.Web.Areas.About.Pages.Index
+@inject IAuthorizationService AuthorizationService
+
+@{
+    ViewData["Title"] = "About";
+}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">@ViewData["Title"]</li>
+  </ol>
+</nav>
+
+<a asp-page="Privacy" class="btn btn-primary">Privacy</a>
+<a asp-page="Contact" class="btn btn-primary">Contact</a>

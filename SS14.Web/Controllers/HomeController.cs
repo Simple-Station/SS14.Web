@@ -21,12 +21,12 @@ public class HomeController : Controller
 
     public IActionResult Privacy()
     {
-        return Redirect("https://spacestation14.com/about/privacy/");
+        return Redirect("https://account.simplestation.org/About/Privacy/");
     }
 
     public IActionResult Contact()
     {
-        return Redirect("https://spacestation14.com/about/contact/");
+        return Redirect("https://account.simplestation.org/About/Contact/");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
